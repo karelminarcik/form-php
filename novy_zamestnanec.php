@@ -1,13 +1,24 @@
 <?php
-    require "assets/dbconnection.php";
     require "functions.php";
+    
+    $first_name = null;
+    $last_name = null;
+    $age = null;
+    $department = null;
+    $position = null;
 
-    if(isset($_POST["submit"])){
-        AddFun();  
-      }
-    
-    
-    
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $first_name = $_POST["first_name"];
+        $last_name = $_POST["last_name"];
+        $age = $_POST["age"];
+        $department = $_POST["department"];
+        $position = $_POST["position"];
+
+        $connection = connectionDB();
+
+        AddEmployee($connection, $first_name, $last_name, $age, $department, $position); 
+    }
+   
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +40,7 @@
         </section>
         <section>
             <div class="wrapper row">
-                <form action="novy_zamestnanec.php" method="POST" class="new_form"><br />
-                    <input  type="text" name="first_name" placeholder="Křestní jméno"><br />
-                    <input type="text" name="last_name" placeholder="Příjmení"><br />
-                    <input type="text" name="age" placeholder="Věk"><br />
-                    <input type="text" name="department" placeholder="Oddělení"><br />
-                    <input type="text" name="position" placeholder="Pozice"><br />
-                    <button type="submit" name="submit">Přidat</button>
-                </form>
+                <?php require "formular_zamestnanec.php" ?>
             </div>
         </section>
     </main>

@@ -15,6 +15,6 @@
         <h1>KONTAKT</h1>
     </main>
 
-    <?php require "footer.php" ?>
+    <?php require "assets/footer.php" ?>
 </body>
 </html>

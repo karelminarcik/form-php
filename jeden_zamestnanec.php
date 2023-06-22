@@ -1,17 +1,14 @@
 <?php
-    require "assets/dbconnection.php";
+    require "functions.php";
+
+    $connection = connectionDB();
 
     if (isset($_GET["id"]) and is_numeric($_GET["id"])){
-        $sql = "SELECT * FROM zamestnanci WHERE id= " .$_GET["id"];
-
-    $result = mysqli_query($connection, $sql);
-
-    if($result === false) {
-        echo mysqli_error($connection);
+       
+        $employees = getEmployee ($connection, $_GET["id"]);
     } else {
-        $employers = mysqli_fetch_assoc($result);
+        $employees = null;
     }
-    } 
 
 ?>
 
@@ -29,21 +26,27 @@
     <?php require "assets/header.php" ?>
 
     <main>
-        <h1>Informace o zaměstnanci <?= htmlspecialchars($employers["first_name"]). " " .htmlspecialchars($employers["last_name"]) ?></h1>
+        <h1>Informace o zaměstnanci <?= htmlspecialchars($employees["first_name"]). " " .htmlspecialchars($employees["last_name"]) ?></h1>
         <section class="one_employer row">
-            <?php if ($employers === NULL):?>
+            <?php if ($employees === NULL):?>
                 <p>Žák nenalezen.</p>
             <?php else: ?>
-                <h2><?= htmlspecialchars($employers["first_name"]). " " .htmlspecialchars($employers["last_name"]) ?></h2>
-                <p>Věk: <?= htmlspecialchars($employers["age"]) ?></p>
-                <p>Oddělení: <?= htmlspecialchars($employers["department"]) ?></p>
-                <p>Pozice: <?= htmlspecialchars($employers["position"]) ?></p>
+                <h2><?= htmlspecialchars($employees["first_name"]). " " .htmlspecialchars($employees["last_name"]) ?></h2>
+                <p>Věk: <?= htmlspecialchars($employees["age"]) ?></p>
+                <p>Oddělení: <?= htmlspecialchars($employees["department"]) ?></p>
+                <p>Pozice: <?= htmlspecialchars($employees["position"]) ?></p>
             <?php endif ?>
-
-            <br />
-            <a href="zamestnanci.php" class="zpet">Zpět na výpis zaměstnanců</a>
             
         </section>
+        <section class="edit_button row">
+                <a href="editace_zamestnance.php?id=<?= $employees['id']?>">Editovat</a>
+                <a href="odstranit_zamestnance.php?id=<?= $employees['id']?>">Odstranit</a>
+        </section>
+        
+        <section class="back_button">
+            <a href="zamestnanci.php" class="zpet">Zpět na výpis zaměstnanců</a>
+        </section>
+        
     </main>
     
     <?php require "assets/footer.php" ?>

@@ -18,13 +18,13 @@
         <section class="our_projects heading-main">
                 <h2>Naše projekty</h2>
         </section>
-        <section class="content raw">
+        <section class="row">
             
-            <div class="raw col span-1-of-2">
+            <div class="col span-1-of-2">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit tempora facilis iste ut accusamus necessitatibus! Reprehenderit, neque nostrum ipsam perspiciatis rem molestias, nisi vitae eaque illo magnam recusandae ab!</p>
             </div>
 
-            <div class="raw col span-1-of-2">
+            <div class="col span-1-of-2">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit tempora facilis iste ut accusamus necessitatibus! Reprehenderit, neque nostrum ipsam perspiciatis rem molestias, nisi vitae eaque illo magnam recusandae ab!</p>
             </div>
 

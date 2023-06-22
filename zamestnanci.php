@@ -1,15 +1,9 @@
 <?php
-    require "assets/dbconnection.php";
+    require "functions.php";
 
-    $sql = "SELECT * FROM zamestnanci";
+    $connection = connectionDB();
 
-    $result = mysqli_query($connection, $sql);
-
-    if ($result === false){
-        echo mysqli_error($connection);
-    } else {
-        $employers = mysqli_fetch_all($result, MYSQLI_ASSOC); 
-    }
+    $employees = getAllEmployees($connection, "id, first_name, last_name");
 
 ?>
 
@@ -29,14 +23,14 @@
     <main>
         <h1>Seznam zaměstnanců</h1>
         <section class="one_employer row">
-            <?php if(empty($employers)): ?>
+            <?php if(empty($employees)): ?>
                 <p>Žádní žáci nebyli nalezeni</p>
             <?php else: ?>
                 <ul>
-                    <?php foreach($employers as $one_employer): ?>
+                    <?php foreach($employees as $one_employer): ?>
                         <li>
                             <div class="employer_name">
-                                <?php echo $one_employer["first_name"]. " " .$one_employer["last_name"] ?>
+                                <?php echo htmlspecialchars($one_employer["first_name"]) . " " . htmlspecialchars($one_employer["last_name"]) ?>
                             </div>
                             <div class="employer_info">
                                 <a href="jeden_zamestnanec.php?id=<?= $one_employer['id'];?>">Více informací</a>

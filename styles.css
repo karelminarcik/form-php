@@ -92,6 +92,15 @@ h1 {
 .one_employer a {
     text-decoration: none;
 }
+ 
+.edit_button {
+    padding-top: 20px;
+}
+
+.back_button {
+    padding-top: 20px;
+    text-align: center;
+}
 
 .zpet {
     border: 1px solid #dd8500;
@@ -182,6 +191,20 @@ h1 {
     border-bottom: 2px solid #000;
 }
 
+/*Delete employee*/
+
+.delete_form {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.delete_form p {
+    padding-bottom: 20px;
+}
+
+.delete_form a {
+    padding-left: 15px;
+}
 /* Footer */
 
 footer {
