@@ -4,51 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="query/header-query.css">
+    <link rel="stylesheet" href="query/index-query.css">
+    <script src="https://kit.fontawesome.com/c3fa60ce80.js" crossorigin="anonymous"></script>
     <title>Firma</title>
 </head>
 <body>
    <?php require "assets/header.php" ?>
 
     <main>
-        <section class="firm_title">
-            <h1>FIRM - Lorem ipsum dolor sit amet consectetur adipisici</h1>
+        <section class="main-heading">
+            <img src="img/logo.png" alt="firm">
+            <h1>FIRM design</h1>
+            <h2>Profesional web design</h2>
         </section>
-        <section class="our_projects heading-main">
-                <h2>Naše projekty</h2>
-        </section>
-        <section class="row">
-            
-            <div class="col span-1-of-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit tempora facilis iste ut accusamus necessitatibus! Reprehenderit, neque nostrum ipsam perspiciatis rem molestias, nisi vitae eaque illo magnam recusandae ab!</p>
-            </div>
-
-            <div class="col span-1-of-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit tempora facilis iste ut accusamus necessitatibus! Reprehenderit, neque nostrum ipsam perspiciatis rem molestias, nisi vitae eaque illo magnam recusandae ab!</p>
-            </div>
-
-        </section>
-       
-        <section class="photogalery row">
-            <div class="heading-main">
-                <h2>Fotogalerie</h2>
-            </div>
-            <div class="our_services">
-                <div class="col span-1-of-2">
-                    <img src="img/seo.jpg" alt="firm-seo">
-                </div>
-                <div class="col span-1-of-2">
-                    <img src="img/helpdesk.jpg" alt="firm-helpdesk">
-                </div>
-            </div>
-        </section>
-        <section class="referencies row">
-            <div class="heading-main">
-                <h2>Reference</h2>
-            </div>
-        </section>
+        
     </main>
     <?php require "assets/footer.php" ?>
+
+    <script src="./js/header.js"></script>
 </body>
 </html>

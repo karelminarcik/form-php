@@ -1,88 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* reusable */
-.row {
-    width: 1140px;
-    margin: 0 auto;
-}
-
-.heading-main h2 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.heading-main h2:after {
-    content: "";
-    display: block;
-    width: 150px;
-    border-bottom: 2px solid #dd7000 ;
-    margin: 10px auto ;
-}
-
-/* Header */
-header {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/header.jpg);
-    background-size: cover;
-    height: 15vh;
-}
-
-#logo img {
-    width: 120px ;
-    height: 120px;
-    position: absolute;
-    top: 2%;
-}
-
-nav ul{
-    float: right;
-    margin-top: 35px;
-    margin-right: 50px;
-}
-
-nav ul li{
-    display: inline-block;
-    margin-left: 15px;
-}
-
-nav ul li a{
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-.btn:link,
-.btn:visited {
-    padding: 5px 10px;
-    color: #fff;
-}
-
-.btn:hover,
-.btn:active {
-    border-bottom: 2px solid #fff;
-}
-
-/* About us */
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
-.about-us {
-    margin-top: 15px;
-}
-
-.our_services img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 7px 7px 7px #000;
-}
-
 /***** Jeden zamestnanec******/
 
 .one_employer p {
@@ -205,30 +120,8 @@ h1 {
 .delete_form a {
     padding-left: 15px;
 }
-/* Footer */
 
-footer {
-    background-color: #000;
-}
 
-.footer_text {
-    text-align: center;
-    color: #fff;
-    padding-bottom: 20px;
-}
-
-.social {
-    font-weight: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin: 10px;
-    padding-top: 20px;
-}
-
-.social a {
-    color: #fff;
-    margin: 0 15px;
-}
 
 
 

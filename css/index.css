@@ -1,0 +1,80 @@
+main {
+    height: 80vh;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.24)),
+                url("../img/firm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-heading { 
+    text-align: center;    
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+
+.main-heading img {
+    width: 200px;
+    border-radius: 10px;
+    animation: fromTop 3s linear;
+}
+
+.main-heading h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    animation: reveal 3s linear;
+    
+}
+
+.main-heading h2{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    animation: fromBottom 3s linear;
+}
+
+/***********
+keyframes
+************/
+
+@keyframes reveal{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fromTop{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(+50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
