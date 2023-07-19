@@ -122,6 +122,18 @@
 }
 
 
+/*Registarion form*/
 
-
-
+.registration-form {
+    height: 80vh;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.24)),
+                url("../img/firm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

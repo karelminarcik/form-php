@@ -61,7 +61,7 @@ function AddEmployee($connection, $first_name, $second_name, $age, $department, 
                 $url_protocol = "http";
             }
 
-            header("location: $url_protocol://" . $_SERVER["HTTP_HOST"] . "/form-php/jeden_zamestnanec.php?id=$id");
+            header("location: $url_protocol://" . $_SERVER["HTTP_HOST"] . "/form-php/admin/jeden_zamestnanec.php?id=$id");
         } else {
             echo mysqli_stmt_error($statement);
         }
@@ -134,7 +134,7 @@ function AddEmployee($connection, $first_name, $second_name, $age, $department, 
         mysqli_stmt_bind_param($stmt, "ssissi", $first_name, $last_name, $age, $department, $position, $id );
         
         if (mysqli_stmt_execute($stmt)) {
-            redirectUrl("/form-php/jeden_zamestnanec.php?id=$id");
+            redirectUrl("/form-php/admin/jeden_zamestnanec.php?id=$id");
         }
     }
  }
@@ -163,7 +163,7 @@ function AddEmployee($connection, $first_name, $second_name, $age, $department, 
         mysqli_stmt_bind_param($stmt, "i", $id);
 
         if (mysqli_stmt_execute($stmt)) {
-            redirectUrl("/form-php/zamestnanci.php");
+            redirectUrl("/form-php/admin/zamestnanci.php");
         } else {
             echo mysqli_error($connection);
         }
@@ -194,3 +194,6 @@ function AddEmployee($connection, $first_name, $second_name, $age, $department, 
         return $employers;
     }
  }
+
+
+ 

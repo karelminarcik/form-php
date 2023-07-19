@@ -1,5 +1,12 @@
 <?php 
-require "functions.php";
+require "../functions.php";
+require "../assets/auth.php";
+
+session_start();
+
+if ( !isLoggedIn() ){
+    die("Nepovoleny pristup");
+}
 
 
 $connection = connectionDB();
@@ -50,22 +57,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
-    <?php require "assets/header.php" ?>
+    <?php require "../assets/admin-header.php" ?>
 
     <main>
         <section>
             <div class="wrapper row">
-            <?php require "formular_zamestnanec.php" ?>
+            <?php require "./formular_zamestnanec.php" ?>
             </div>
         </section>
     </main>
 
-    <?php require "assets/footer.php" ?>
+    <?php require "../assets/footer.php" ?>
 </body>
 </html>

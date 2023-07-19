@@ -24,6 +24,11 @@ footer {
 
 } 
 
+.social a:hover {
+    border-bottom: solid 2px white;
+
+} 
+
 .footer_text {
     margin-bottom:  10px;
 }
