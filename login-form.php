@@ -11,13 +11,30 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="query/header-query.css">
     <script src="https://kit.fontawesome.com/c3fa60ce80.js" crossorigin="anonymous"></script>
-    <title>kontakt</title>
+    <title>prihlaseni</title>
 </head>
 <body>
     <?php require "assets/header.php" ?>
 
     <main>
-        <h1>KONTAKT</h1>
+        <section class="reglog-form">
+            
+            <form action="./admin/login.php" method="POST">
+               
+                <div class="inputfield">
+                    <input type="email" class="form-input" name="login-email" placeholder="Email" required>
+                </div>
+                <div class="inputfield">
+                    <input type="password" class="form-input" name="login-password" placeholder="Heslo" required>
+                </div>
+                <div class="buttonfield">
+                    <input type="submit" class="registration-button" value="Přihlásit se">
+                </div>
+                
+                
+            </form>
+
+        </section>
     </main>
 
     <?php require "assets/footer.php" ?>

@@ -20,7 +20,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if (!empty($id)){
         // Zabraňuje provedení tzv. fixation attack. Více zde:
         https://owasp.org/www-community/attacks/Session_fixation
-
         session_regenerate_id(true);
 
         // Nastaveni ze je uzivatel prihlaseny 

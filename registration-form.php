@@ -16,15 +16,29 @@
     <?php require "assets/header.php" ?>
 
     <main>
-        <section class="registration-form">
+        <section class="reglog-form">
             
             <form action="admin/after-registration.php" method="POST">
-                <input type="text" name="first_name" placeholder="Křestní jméno" required><br />
-                <input type="text" name="second_name" placeholder="Příjmení" required><br />
-                <input type="email" name="email" placeholder="Email" required><br />
-                <input type="password" name="password" placeholder="Heslo" required><br />
-                <input type="password" name="password-again" placeholder="Potvrďte heslo" required><br />
-                <input type="submit" value="Zaregistrovat">
+                <div class="inputfield">
+                    <input type="text" class="form-input" name="first_name" placeholder="Křestní jméno" required>
+                </div>
+                <div class="inputfield">
+                    <input type="text" class="form-input" name="second_name" placeholder="Příjmení" required>
+                </div>
+                <div class="inputfield">
+                    <input type="email" class="form-input" name="email" placeholder="Email" required>
+                </div>
+                <div class="inputfield">
+                    <input type="password" class="form-input" name="password" placeholder="Heslo" required>
+                </div>
+                <div class="inputfield">
+                    <input type="password" class="form-input" name="password-again" placeholder="Potvrďte heslo" required>
+                </div>
+                <div class="buttonfield">
+                    <input type="submit" class="registration-button" value="Zaregistrovat">
+                </div>
+                
+                
             </form>
 
         </section>

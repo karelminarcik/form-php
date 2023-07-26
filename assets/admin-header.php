@@ -10,6 +10,8 @@
             <ul>
                 <li><a href="zamestnanci.php" class = "btn">SEZNAM ZAMĚSTNANCU</a></li>
                 <li><a href="novy_zamestnanec.php" class = "btn">PŘIDAT ZAMĚSTNANCE</a></li>
+                <li><a href="log-out.php" class = "btn">ODHLASIT</a></li>
+
             </ul>
         </nav>
 

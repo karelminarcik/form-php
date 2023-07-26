@@ -124,7 +124,7 @@
 
 /*Registarion form*/
 
-.registration-form {
+.reglog-form {
     height: 80vh;
     background: linear-gradient(black,rgba(0, 0, 0, 0.24)),
                 url("../img/firm.jpg");
@@ -137,3 +137,37 @@
     justify-content: center;
     align-items: center;
 }
+
+.inputfield {
+    margin: 10px;
+    text-align: center;
+}
+
+.inputfield .form-input {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.buttonfield {
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.registration-button {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(92, 87, 87);
+    color: white;
+}
+
+.registration-button:hover {
+    background-color: white;
+    color: rgb(92, 87, 87) ;
+    cursor: pointer;
+}
+
+
