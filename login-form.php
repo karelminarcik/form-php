@@ -19,6 +19,7 @@
     <main>
         <section class="reglog-form">
             
+            <h1>Přihlášení</h1>
             <form action="./admin/login.php" method="POST">
                
                 <div class="inputfield">

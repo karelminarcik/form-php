@@ -17,7 +17,7 @@
 
     <main>
         <section class="reglog-form">
-            
+            <h1>Registrace</h1>
             <form action="admin/after-registration.php" method="POST">
                 <div class="inputfield">
                     <input type="text" class="form-input" name="first_name" placeholder="Křestní jméno" required>
@@ -29,11 +29,12 @@
                     <input type="email" class="form-input" name="email" placeholder="Email" required>
                 </div>
                 <div class="inputfield">
-                    <input type="password" class="form-input" name="password" placeholder="Heslo" required>
+                    <input type="password" class="form-input password-first" name="password" placeholder="Heslo" required>
                 </div>
                 <div class="inputfield">
-                    <input type="password" class="form-input" name="password-again" placeholder="Potvrďte heslo" required>
+                    <input type="password" class="form-input password-second" name="password-again" placeholder="Potvrďte heslo" required>
                 </div>
+                <p class="result-text"></p>
                 <div class="buttonfield">
                     <input type="submit" class="registration-button" value="Zaregistrovat">
                 </div>
@@ -48,5 +49,6 @@
 
     <?php require "assets/footer.php" ?>
     <script src="./js/header.js"></script>
+    <script src="./js/passwordchecker.js"></script>
 </body>
 </html>

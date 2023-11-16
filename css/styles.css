@@ -33,14 +33,20 @@
 
 
 
-/***** Register form *****/
+/***** Add Employee *****/
 
 .wrapper {
-    max-width: 700px;
-    background: #dd7000;
-    margin: 20px auto;
-    padding: 30px;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+    height: 80vh;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.24)),
+                url("../img/firm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper .new_form{
@@ -48,36 +54,53 @@
 }
 
 .new_form input{
-    text-align: center;
-    width: 80%;
-    margin-top: 10px;
-    padding: 7px;
-    font-size: 20;
+    font-size: 20px;
+    padding: 5px 10px;
     border-radius: 10px;
-    border: 2px solid black;
-    box-shadow: 5px 5px 5px black;
+    margin: 5px;
+    text-align: center;
 }
 
 .new_form button{
-    text-align: center;
-    width: 80%;
-    margin-top: 10px;
-    padding: 7px;
-    font-size: 20;
+    font-size: 20px;
+    padding: 5px 10px;
     border-radius: 10px;
-    border: 2px solid black;
-    box-shadow: 5px 5px 5px black;
-    background-color: #dd8500;
-    color: #fff;
+    text-align: center;
+    background-color: rgb(92, 87, 87);
+    color: white;
+    margin-top: 20px;
 }
 
 .new_form button:hover{
-    color: #000;
-    font-weight: bold;
+    background-color: white;
+    color: rgb(92, 87, 87) ;
+    cursor: pointer;
 }
 
-/* Employers page */
+/* Employees page */
+.employees {
+    height: 80vh;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.24)),
+                url("../img/firm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.employees h1 {
+    color: white;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
 .one_employer ul {
+    display: flexbox;
+    flex-direction: column;
     list-style-type: none;
 }
 
@@ -90,6 +113,7 @@
     display: inline-block;
     width: 300px;
     list-style-type: square;
+    color: white;
 }
 
 .one_employer .employer_info{
@@ -99,11 +123,12 @@
 .one_employer .employer_info a:link,
 .one_employer .employer_info a:visited{
     text-decoration: none;
+    color: bisque;
 }
 
 .one_employer .employer_info a:hover,
 .one_employer .employer_info a:active{
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid bisque;
 }
 
 /*Delete employee*/
@@ -133,9 +158,15 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.reglog-form h1 {
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
 }
 
 .inputfield {
@@ -148,6 +179,21 @@
     padding: 5px 10px;
     border-radius: 10px;
 }
+
+    /* Java script classes */
+
+.valid {
+    color: greenyellow;
+    text-align: center;
+    font-size: 20px;
+}
+
+.invalid {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
+    /* Java script classes end */
 
 .buttonfield {
     margin-top: 30px;

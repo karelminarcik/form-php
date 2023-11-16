@@ -47,11 +47,9 @@
     <?php require "../assets/admin-header.php" ?>
 
     <main>
-        <section class="row"> 
-            <h1>Přidat nového zaměstnance</h1>
-        </section>
-        <section>
-            <div class="wrapper row">
+        <section class="employees"> 
+            <div class="wrapper">
+                <h1>Přidat nového zaměstnance</h1>
                 <?php require "formular_zamestnanec.php" ?>
             </div>
         </section>

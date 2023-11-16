@@ -35,25 +35,28 @@
     <?php require "../assets/admin-header.php" ?>
 
     <main>
-        <h1>Seznam zaměstnanců</h1>
-        <section class="one_employer row">
-            <?php if(empty($employees)): ?>
-                <p>Žádní žáci nebyli nalezeni</p>
-            <?php else: ?>
-                <ul>
-                    <?php foreach($employees as $one_employer): ?>
-                        <li>
-                            <div class="employer_name">
-                                <?php echo htmlspecialchars($one_employer["first_name"]) . " " . htmlspecialchars($one_employer["last_name"]) ?>
-                            </div>
-                            <div class="employer_info">
-                                <a href="jeden_zamestnanec.php?id=<?= $one_employer['id'];?>">Více informací</a>
-                            </div>
-                            
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+        <section class="employees">
+            <div class="one_employer">
+                <h1>Seznam zaměstnanců</h1>
+                <?php if(empty($employees)): ?>
+                    <p>Žádní žáci nebyli nalezeni</p>
+                <?php else: ?>
+                    <ul>
+                        <?php foreach($employees as $one_employer): ?>
+                            <li>
+                                <div class="employer_name">
+                                    <?php echo htmlspecialchars($one_employer["first_name"]) . " " . htmlspecialchars($one_employer["last_name"]) ?>
+                                </div>
+                                <div class="employer_info">
+                                    <a href="jeden_zamestnanec.php?id=<?= $one_employer['id'];?>">Více informací</a>
+                                </div>
+                                
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
+            
         </section>
     </main>
     <?php require "../assets/footer.php" ?>
